@@ -1,0 +1,20 @@
+{
+    "name": "nextjs-website",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "export": "next export",
+        "start": "next start"
+    },
+    "dependencies": {
+        "bulma": "^0.9.1",
+        "keen-slider": "^5.4.0",
+        "next": "10.0.5",
+        "react": "17.0.1",
+        "react-bulma-components": "^3.4.0",
+        "react-dom": "17.0.1",
+        "sass": "^1.32.5"
+    }
+}
