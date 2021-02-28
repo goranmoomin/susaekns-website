@@ -93,7 +93,7 @@ export default function About() {
                                     </p>
                                 </Columns.Column>
                                 <Columns.Column>
-                                    <iframe src="https:www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3161.8489450268016!2d126.89376061526329!3d37.582174530990024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c990eb3f22a03%3A0xf7aabf6ce1f91e14!2z7IiY7IOJ7Iug6rK97Jm46rO87J2Y7JuQ!5e0!3m2!1sko!2skr!4v1612951793894!5m2!1sko!2skr" style={{ width: "100%", minHeight: 300 }} allowFullScreen aria-hidden="false" tabIndex="0" />
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3161.8489450268016!2d126.89376061526329!3d37.582174530990024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c990eb3f22a03%3A0xf7aabf6ce1f91e14!2z7IiY7IOJ7Iug6rK97Jm46rO87J2Y7JuQ!5e0!3m2!1sko!2skr!4v1612951793894!5m2!1sko!2skr" style={{ width: "100%", minHeight: 300 }} allowFullScreen aria-hidden="false" tabIndex="0" />
                                 </Columns.Column>
                             </Columns>
                         </Block>
