@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Box, Section, Tile, Heading } from "react-bulma-components";
+import { Box, Section, Tile, Heading, Notification } from "react-bulma-components";
 import { useKeenSlider } from "keen-slider/react";
 
 import Layout from "../components/layout";
@@ -106,7 +106,7 @@ export default function Home() {
                         </Tile>
                     </Tile>
                     <Tile kind="parent">
-                        <Tile renderAs="article" kind="child" notification color="success">
+                        <Tile kind="child" renderAs={Notification} color="success">
                             <div className="content">
                                 <Heading>Tall tile</Heading>
                                 <Heading subtitle>With even more content</Heading>

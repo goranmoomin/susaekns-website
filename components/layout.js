@@ -11,9 +11,9 @@ export default function Layout({ header, children }) {
             <Head />
             <header>
                 <Hero>
-                    <Hero.Head>
+                    <Hero.Header>
                         <Navbar />
-                    </Hero.Head>
+                    </Hero.Header>
                     <Hero.Body>{header}</Hero.Body>
                 </Hero>
             </header>

@@ -10,11 +10,12 @@
     },
     "dependencies": {
         "bulma": "^0.9.1",
-        "keen-slider": "^5.4.0",
-        "next": "10.0.5",
-        "react": "17.0.1",
-        "react-bulma-components": "^3.4.0",
-        "react-dom": "17.0.1",
+        "keen-slider": "^5.5.1",
+        "next": "13.4.9",
+        "prop-types": "^15.8.1",
+        "react": "18.2.0",
+        "react-bulma-components": "^4.1.0",
+        "react-dom": "18.2.0",
         "sass": "^1.32.5"
     }
 }
