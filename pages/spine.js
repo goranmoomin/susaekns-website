@@ -1,13 +1,10 @@
-import { Section, Heading, Container, Menu, Columns, Box } from "react-bulma-components";
+import { Section, Heading, Container, Menu, Columns, Box, Block } from "react-bulma-components";
 
 import Layout from "../components/layout";
-import Block from "../components/block";
 
 export default function Spine() {
     return (
-        <Layout header={
-            <img src="http://sangamtop.com/images/banner2.jpg" />
-        }>
+        <Layout>
             <Columns>
                 <Columns.Column size={2} responsive={{ touch: { hide: { value: true } } }}>
                     <Box>

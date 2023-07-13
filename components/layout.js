@@ -1,6 +1,6 @@
-import React from "react";
+import Image from "next/image";
 
-import { Hero, Container, Footer, Content } from "react-bulma-components";
+import { Hero, Container, Footer, Content, Element } from "react-bulma-components";
 
 import Head from "./head.js";
 import Navbar from "./navbar.js";
@@ -14,7 +14,20 @@ export default function Layout({ header, children }) {
                     <Hero.Header>
                         <Navbar />
                     </Hero.Header>
-                    <Hero.Body>{header}</Hero.Body>
+                    <Hero.Body>
+                        {header ||
+                         <Element display="relative" style={{ height: 0, paddingBottom: "20%" }}>
+                             <Image src="/images/banner0.jpg" fill style={{ objectFit: "cover" }} alt="" />
+                             <Element display="flex" justifyContent="center" alignItems="center"
+                                      style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0, 0, 0, 0.3)" }}>
+                                 <Element textColor="light">
+                                     <Element textSize={3} textWeight="semibold">통증없는 세상을 위한 수색신경외과</Element>
+                                     차별화된 진료로 내원하신 환자 여러분의 건강만을<br/>
+                                     최우선으로 하는 수색신경외과의원이 되겠습니다.
+                                 </Element>
+                             </Element>
+                         </Element>}
+                    </Hero.Body>
                 </Hero>
             </header>
             <main>

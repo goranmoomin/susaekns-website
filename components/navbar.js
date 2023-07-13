@@ -57,11 +57,14 @@ export default function MyNavbar() {
                             <Navbar.Item href="#" renderAs={Link}>프롤로치료</Navbar.Item>
                             <Navbar.Item href="#" renderAs={Link}>DNA 인대증식치료</Navbar.Item>
                             <Navbar.Item href="#" renderAs={Link}>도수치료</Navbar.Item>
-                            <Navbar.Item href="#" renderAs={Link}>
-                                특수운동치료 (수술 후 개인맞춤 재활운동)
-                            </Navbar.Item>
-                            <Navbar.Item href="#" renderAs={Link}>식운동</Navbar.Item>
                             <Navbar.Item href="#" renderAs={Link}>자가혈장치료(PRP)</Navbar.Item>
+                        </Navbar.Dropdown>
+                    </Navbar.Item>
+                    <Navbar.Item hoverable>
+                        <Navbar.Link href="#" renderAs={Link}>공지사항</Navbar.Link>
+                        <Navbar.Dropdown>
+                            <Navbar.Item href="#" renderAs={Link}>병원소식</Navbar.Item>
+                            <Navbar.Item href="#" renderAs={Link}>비급여진료</Navbar.Item>
                         </Navbar.Dropdown>
                     </Navbar.Item>
                 </Navbar.Container>

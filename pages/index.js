@@ -1,25 +1,26 @@
-import React from "react";
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
-import { Box, Section, Tile, Heading, Notification } from "react-bulma-components";
+import { Box, Section, Tile, Heading, Notification, Content, Columns, Element } from "react-bulma-components";
 import { useKeenSlider } from "keen-slider/react";
 
 import Layout from "../components/layout";
 
 function Slide({ children }) {
-    return <div className="keen-slider__slide" style={{ position: "relative", height: 0, paddingBottom: "40%" }}>{children}</div>;
+    return <div className="keen-slider__slide is-relative" style={{ height: 0, paddingBottom: "40%" }}>{children}</div>;
 }
 
 function AutoSlider({ children }) {
-    let [pause, setPause] = React.useState(false);
-    let timer = React.useRef();
+    let [pause, setPause] = useState(false);
+    let timer = useRef();
     let [sliderRef, slider] = useKeenSlider({
         loop: true,
         duration: 1000,
         dragStart: () => { setPause(true); },
         dragEnd: () => { setPause(false); }
     });
-    React.useEffect(() => {
+    useEffect(() => {
         sliderRef.current.addEventListener("mouseover", () => {
             setPause(true);
         });
@@ -27,7 +28,7 @@ function AutoSlider({ children }) {
             setPause(false);
         });
     }, [sliderRef]);
-    React.useEffect(() => {
+    useEffect(() => {
         timer.current = setInterval(() => {
             if (!pause && slider) {
                 slider.next();
@@ -49,75 +50,99 @@ export default function Home() {
         <Layout header={
             <AutoSlider>
                 <Slide>
-                    <Image src="/images/banner0.jpg" fill style={{objectFit: "cover"}} alt="" />
-                    <div style={{ position: "absolute", inset: "20%", backgroundColor: "rgba(0, 0, 0, 20%)", color: "white" }}>메인 배너 1</div>
+                    <Image src="/images/banner0.jpg" fill style={{ objectFit: "cover" }} alt="" />
+                    <Element display="flex" justifyContent="center" alignItems="center"
+                             style={{ position: "absolute", inset: "20%", backgroundColor: "rgba(0, 0, 0, 0.3)" }}>
+                        <Element textColor="light" textSize={4} textWeight="semibold">
+                            수색신경외과 의원은 풍부한 경험을 바탕으로<br />가족같은 마음으로 진료하겠습니다.<br/>
+                            척추 / 관절 / 뇌혈관 / 통증 / 도수치료
+                        </Element>
+                    </Element>
                 </Slide>
                 <Slide>
-                    <Image src="/images/banner1.jpg" fill style={{objectFit: "cover"}} alt="" />
-                    <div style={{ position: "absolute", inset: "20%", backgroundColor: "rgba(0, 0, 0, 20%)", color: "white" }}>메인 배너 2</div>
+                    <Image src="/images/banner1.jpg" fill style={{ objectFit: "cover" }} alt="" />
+                    <Element display="flex" justifyContent="center" alignItems="center"
+                             style={{ position: "absolute", inset: "20%", backgroundColor: "rgba(0, 0, 0, 0.3)" }}>
+                        <Element textAlign="center" textColor="light" textSize={2} textWeight="semibold">
+                            숙련된 전문 도수치료사의<br />1:1 맞춤 치료
+                        </Element>
+                    </Element>
                 </Slide>
             </AutoSlider>
         }>
             <Section>
+                <Heading size={4}>진료 내용</Heading>
                 <Tile kind="ancestor">
-                    <Tile size={8} vertical>
-                        <Tile>
-                            <Tile kind="parent" vertical>
-                                <Tile kind="child">
-                                    <Box textColor="white" backgroundColor="info">
-                                        <Heading textColor="white" size={4}>진료 일정</Heading>
-                                        <p>
-                                            평일 오전9시 – 오후 6시<br />
-                                            토요일 오전 9시 – 오후 2시<br />
-                                            일요일 / 공휴일 휴진<br />
-                                            점심시간은 오후 12시 30분 – 1시30분<br />
-                                            (토요일은 점심시간없이 진료합니다)
-                                        </p>
-                                    </Box>
-                                </Tile>
-                                <Tile kind="child">
-                                    <Box textColor="white" backgroundColor="primary">
-                                        <Heading textColor="white" size={4}>주요 경력</Heading>
-                                        <ul style={{ listStyle: "circle inside" }}>
-                                            <li>중앙대학교 의과대학 졸업</li>
-                                            <li>신경외과 전문의</li>
-                                            <li>중앙대학교 신경외과 박사수료</li>
-                                            <li>성애병원 신경외과 과장</li>
-                                            <li>중앙대학교 신경외과 외래교수</li>
-                                            <li>대한 신경외과학회 정회원</li>
-                                            <li>대한 척추신경외과학회 정회원</li>
-                                            <li>대한 노인신경외과학회 정회원</li>
-                                            <li>대한 신경손상학회 정회원</li>
-                                        </ul>
-                                    </Box>
-                                </Tile>
-                            </Tile>
-                            <Tile kind="parent">
-                                <Tile kind="child">
-                                    <Box>
-                                        <Heading>Middle Tile...</Heading>
-                                        <Heading subtitle>With image Tile...</Heading>
-                                        <p>텍스트 텍스트 텍스트</p>
-                                    </Box>
-                                </Tile>
-                            </Tile>
+                    <Tile kind="parent" vertical>
+                        <Tile kind="child" display="relative" style={{ height: 0, paddingBottom: "50%" }} className="overflow-hidden">
+                            <Link href="#">
+                                <Image src="/images/therapy.jpeg" fill className="object-cover transition-transform hover:scale-125" alt="" />
+                            </Link>
+                            <Element display="flex" justifyContent="center" alignItems="center" overlay className="bg-black/30 pointer-events-none">
+                                <Element textColor="light" textSize={4}>
+                                    도수치료
+                                </Element>
+                            </Element>
                         </Tile>
-                        <Tile kind="parent">
-                            <Tile kind="child">
-                                <Box>Hello, World!</Box>
-                            </Tile>
+                        <Tile kind="child" display="relative" style={{ height: 0, paddingBottom: "50%" }} className="overflow-hidden">
+                            <Link href="#">
+                                <Image src="/images/shockwave.jpeg" fill className="object-cover transition-transform hover:scale-125" alt="" />
+                            </Link>
+                            <Element display="flex" justifyContent="center" alignItems="center" overlay className="bg-black/30 pointer-events-none">
+                                <Element textColor="light" textSize={4}>
+                                    체외충격파치료
+                                </Element>
+                            </Element>
                         </Tile>
                     </Tile>
-                    <Tile kind="parent">
-                        <Tile kind="child" renderAs={Notification} color="success">
-                            <div className="content">
-                                <Heading>Tall tile</Heading>
-                                <Heading subtitle>With even more content</Heading>
-                                <div className="content" />
-                            </div>
+                    <Tile kind="parent" vertical>
+                        <Tile kind="child" display="relative" style={{ height: 0, paddingBottom: "50%" }} className="overflow-hidden">
+                            <Link href="#">
+                                <Image src="/images/joint.jpeg" fill className="object-cover transition-transform hover:scale-125" alt="" />
+                            </Link>
+                            <Element display="flex" justifyContent="center" alignItems="center" overlay className="bg-black/30 pointer-events-none">
+                                <Element textColor="light" textSize={4}>
+                                    관절치료
+                                </Element>
+                            </Element>
+                        </Tile>
+                        <Tile kind="child" display="relative" style={{ height: 0, paddingBottom: "50%" }} className="overflow-hidden">
+                            <Link href="#">
+                                <Image src="/images/spine.jpeg" fill className="object-cover transition-transform hover:scale-125" alt="" />
+                            </Link>
+                            <Element display="flex" justifyContent="center" alignItems="center" overlay className="bg-black/30 pointer-events-none">
+                                <Element textColor="light" textSize={4}>
+                                    척추치료
+                                </Element>
+                            </Element>
                         </Tile>
                     </Tile>
                 </Tile>
+            </Section>
+            <Section>
+                <Columns>
+                    <Columns.Column>
+                        <Heading size={4}>진료 일정</Heading>
+                        <Content>
+                            <strong>평일:</strong> 09:00 AM ~ 06:00 PM<br />
+                            <strong>토요일:</strong> 09:00 AM ~ 02:00 PM<br />
+                            <strong>일요일 / 공휴일:</strong> 휴진<br />
+                            <br />
+                            <strong>점심시간:</strong> 12:30 PM ~ 01:30 PM<br />
+                            (토요일은 점심시간 없이 진료합니다)
+                        </Content>
+                    </Columns.Column>
+                    <Columns.Column>
+                        <Heading size={4}>오시는 길</Heading>
+                        <Content>
+                            서울특별시 은평구 수색로 256 (수색동 106-1) 3층<br />
+                            <strong>지하철역:</strong> 경인국철 수색역, DMC역<br />
+                            <strong>버스정류장:</strong><br />
+                            <strong>TEL.</strong> 02-305-4463
+                        </Content>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3161.8489450268016!2d126.89376061526329!3d37.582174530990024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c990eb3f22a03%3A0xf7aabf6ce1f91e14!2z7IiY7IOJ7Iug6rK97Jm46rO87J2Y7JuQ!5e0!3m2!1sko!2skr!4v1612951793894!5m2!1sko!2skr" style={{ width: "100%", minHeight: 300 }} allowFullScreen aria-hidden="false" tabIndex="0" />
+                    </Columns.Column>
+                </Columns>
             </Section>
         </Layout>
     );
