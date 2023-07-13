@@ -41,12 +41,12 @@ export default function MyNavbar() {
                         </Navbar.Dropdown>
                     </Navbar.Item>
                     <Navbar.Item hoverable>
-                        <Navbar.Link href="#" renderAs={Link}>뇌혈관질환</Navbar.Link>
+                        <Navbar.Link href="/cerebrovascular" renderAs={Link}>뇌혈관질환</Navbar.Link>
                         <Navbar.Dropdown>
-                            <Navbar.Item href="#" renderAs={Link}>두통</Navbar.Item>
-                            <Navbar.Item href="#" renderAs={Link}>어지럼증</Navbar.Item>
-                            <Navbar.Item href="#" renderAs={Link}>치매</Navbar.Item>
-                            <Navbar.Item href="#" renderAs={Link}>뇌졸증</Navbar.Item>
+                            <Navbar.Item href="/cerebrovascular#headache" renderAs={Link}>두통</Navbar.Item>
+                            <Navbar.Item href="/cerebrovascular#dizziness" renderAs={Link}>어지럼증</Navbar.Item>
+                            <Navbar.Item href="/cerebrovascular#dementia" renderAs={Link}>치매</Navbar.Item>
+                            <Navbar.Item href="/cerebrovascular#stroke" renderAs={Link}>뇌졸증</Navbar.Item>
                         </Navbar.Dropdown>
                     </Navbar.Item>
                     <Navbar.Item hoverable>
