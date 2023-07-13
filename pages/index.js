@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 import { Box, Section, Tile, Heading, Notification } from "react-bulma-components";
 import { useKeenSlider } from "keen-slider/react";
@@ -6,7 +7,7 @@ import { useKeenSlider } from "keen-slider/react";
 import Layout from "../components/layout";
 
 function Slide({ children }) {
-    return <div className="keen-slider__slide">{children}</div>;
+    return <div className="keen-slider__slide" style={{ position: "relative", height: 0, paddingBottom: "40%" }}>{children}</div>;
 }
 
 function AutoSlider({ children }) {
@@ -48,10 +49,12 @@ export default function Home() {
         <Layout header={
             <AutoSlider>
                 <Slide>
-                    <img src="http://sangamtop.com/images/main_banner.jpg" />
+                    <Image src="/images/banner0.jpg" fill style={{objectFit: "cover"}} alt="" />
+                    <div style={{ position: "absolute", inset: "20%", backgroundColor: "rgba(0, 0, 0, 20%)", color: "white" }}>메인 배너 1</div>
                 </Slide>
                 <Slide>
-                    <img src="http://sangamtop.com/images/main_banner2.jpg" />
+                    <Image src="/images/banner1.jpg" fill style={{objectFit: "cover"}} alt="" />
+                    <div style={{ position: "absolute", inset: "20%", backgroundColor: "rgba(0, 0, 0, 20%)", color: "white" }}>메인 배너 2</div>
                 </Slide>
             </AutoSlider>
         }>
