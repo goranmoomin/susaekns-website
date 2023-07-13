@@ -43,18 +43,10 @@ export default function MyNavbar() {
                     <Navbar.Item hoverable>
                         <Navbar.Link href="#" renderAs={Link}>뇌혈관질환</Navbar.Link>
                         <Navbar.Dropdown>
-                            <Link href="#" passHref legacyBehavior>
-                                <Navbar.Item href="#" renderAs={Link}>두통</Navbar.Item>
-                            </Link>
-                            <Link href="#" passHref legacyBehavior>
-                                <Navbar.Item href="#" renderAs={Link}>어지럼증</Navbar.Item>
-                            </Link>
-                            <Link href="#" passHref legacyBehavior>
-                                <Navbar.Item href="#" renderAs={Link}>치매</Navbar.Item>
-                            </Link>
-                            <Link href="#" passHref legacyBehavior>
-                                <Navbar.Item href="#" renderAs={Link}>뇌졸증</Navbar.Item>
-                            </Link>
+                            <Navbar.Item href="#" renderAs={Link}>두통</Navbar.Item>
+                            <Navbar.Item href="#" renderAs={Link}>어지럼증</Navbar.Item>
+                            <Navbar.Item href="#" renderAs={Link}>치매</Navbar.Item>
+                            <Navbar.Item href="#" renderAs={Link}>뇌졸증</Navbar.Item>
                         </Navbar.Dropdown>
                     </Navbar.Item>
                     <Navbar.Item hoverable>
