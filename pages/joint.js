@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { Section, Heading, Container, Menu, Columns, Box, Block } from "react-bulma-components";
 
 import Layout from "../components/layout";
@@ -10,9 +12,9 @@ export default function Joint() {
                     <Box>
                         <Menu>
                             <Menu.List title="관절질환">
-                                <Menu.List.Item>어깨</Menu.List.Item>
-                                <Menu.List.Item>팔꿈치 및 손목</Menu.List.Item>
-                                <Menu.List.Item>무릎 및 족부</Menu.List.Item>
+                                <Menu.List.Item href="#shoulder" renderAs={Link}>어깨</Menu.List.Item>
+                                <Menu.List.Item href="#elbow-wrist" renderAs={Link}>팔꿈치 및 손목</Menu.List.Item>
+                                <Menu.List.Item href="#knee-foot" renderAs={Link}>무릎 및 족부</Menu.List.Item>
                             </Menu.List>
                         </Menu>
                     </Box>

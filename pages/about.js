@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 
 import { Section, Heading, Container, Menu, Columns, Box, Element, Block } from "react-bulma-components";
@@ -12,10 +13,11 @@ export default function About() {
                     <Box>
                         <Menu>
                             <Menu.List title="병원소개">
-                                <Menu.List.Item>인사말</Menu.List.Item>
-                                <Menu.List.Item>진료안내</Menu.List.Item>
-                                <Menu.List.Item>오시는 길</Menu.List.Item>
-                                <Menu.List.Item>시설 및 장비</Menu.List.Item>
+                                <Menu.List.Item href="#greeting" renderAs={Link}>인사말</Menu.List.Item>
+                                <Menu.List.Item href="#guide" renderAs={Link}>진료안내</Menu.List.Item>
+                                <Menu.List.Item href="#intro" renderAs={Link}>의료진 소개</Menu.List.Item>
+                                <Menu.List.Item href="#map" renderAs={Link}>오시는 길</Menu.List.Item>
+                                <Menu.List.Item href="#equipment" renderAs={Link}>시설 및 장비</Menu.List.Item>
                             </Menu.List>
                         </Menu>
                     </Box>
@@ -79,7 +81,7 @@ export default function About() {
                             </Columns.Column>
                         </Columns>
                     </Section>
-                    <Section>
+                    <Section id="intro">
                         <Block><Heading size={3}>의료진 소개</Heading></Block>
                         <Block clearfix>
                             <Image src="/images/profile.jpg" width={400} height={314} alt="" className="is-pulled-right" />

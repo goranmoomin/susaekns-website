@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { Section, Heading, Container, Menu, Columns, Box, Block, Content } from "react-bulma-components";
 
 import Layout from "../components/layout";
@@ -10,10 +12,10 @@ export default function Cerebrovascular() {
                     <Box>
                         <Menu>
                             <Menu.List title="뇌혈관질환">
-                                <Menu.List.Item>두통</Menu.List.Item>
-                                <Menu.List.Item>어지럼증</Menu.List.Item>
-                                <Menu.List.Item>치매</Menu.List.Item>
-                                <Menu.List.Item>뇌졸증</Menu.List.Item>
+                                <Menu.List.Item href="#headache" renderAs={Link}>두통</Menu.List.Item>
+                                <Menu.List.Item href="#dizziness" renderAs={Link}>어지럼증</Menu.List.Item>
+                                <Menu.List.Item href="#dementia" renderAs={Link}>치매</Menu.List.Item>
+                                <Menu.List.Item href="#stroke" renderAs={Link}>뇌졸증</Menu.List.Item>
                             </Menu.List>
                         </Menu>
                     </Box>

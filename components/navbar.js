@@ -50,14 +50,15 @@ export default function MyNavbar() {
                         </Navbar.Dropdown>
                     </Navbar.Item>
                     <Navbar.Item hoverable>
-                        <Navbar.Link href="#" renderAs={Link}>비수술적치료</Navbar.Link>
+                        <Navbar.Link href="/nonsurgical" renderAs={Link}>비수술적치료</Navbar.Link>
                         <Navbar.Dropdown>
-                            <Navbar.Item href="#" renderAs={Link}>C-arm 영상유도 척추시술</Navbar.Item>
-                            <Navbar.Item href="#" renderAs={Link}>초음파유도 근골격시술</Navbar.Item>
-                            <Navbar.Item href="#" renderAs={Link}>프롤로치료</Navbar.Item>
-                            <Navbar.Item href="#" renderAs={Link}>DNA 인대증식치료</Navbar.Item>
-                            <Navbar.Item href="#" renderAs={Link}>도수치료</Navbar.Item>
-                            <Navbar.Item href="#" renderAs={Link}>자가혈장치료(PRP)</Navbar.Item>
+                            <Navbar.Item href="/nonsurgical#manual" renderAs={Link}>도수치료</Navbar.Item>
+                            <Navbar.Item href="/nonsurgical#carm" renderAs={Link}>C-arm 유도 척추중재 시술</Navbar.Item>
+                            <Navbar.Item href="/nonsurgical#prp" renderAs={Link}>PRP 자가혈 주사치료</Navbar.Item>
+                            <Navbar.Item href="/nonsurgical#supersonic" renderAs={Link}>근골격 초음파 유도시술</Navbar.Item>
+                            <Navbar.Item href="/nonsurgical#prolo" renderAs={Link}>프롤로 치료</Navbar.Item>
+                            <Navbar.Item href="/nonsurgical#dna" renderAs={Link}>DNA 인대증식 치료</Navbar.Item>
+                            <Navbar.Item href="/nonsurgical#shockwave" renderAs={Link}>체외충격파 치료</Navbar.Item>
                         </Navbar.Dropdown>
                     </Navbar.Item>
                     <Navbar.Item hoverable>

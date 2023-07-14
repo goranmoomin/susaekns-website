@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { Section, Heading, Container, Menu, Columns, Box, Block } from "react-bulma-components";
 
 import Layout from "../components/layout";
@@ -10,8 +12,8 @@ export default function Spine() {
                     <Box>
                         <Menu>
                             <Menu.List title="척추질환">
-                                <Menu.List.Item>경추질환</Menu.List.Item>
-                                <Menu.List.Item>요추질환</Menu.List.Item>
+                                <Menu.List.Item href="#cervical" renderAs={Link}>경추질환</Menu.List.Item>
+                                <Menu.List.Item href="#lumbar" renderAs={Link}>요추질환</Menu.List.Item>
                             </Menu.List>
                         </Menu>
                     </Box>
