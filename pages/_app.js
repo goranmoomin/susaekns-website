@@ -5,7 +5,7 @@ import { Box, Form } from "react-bulma-components";
 
 function MyApp({ Component, pageProps }) {
     let [password, setPassword] = useState("");
-    let isAuthorized = password == "susaekns";
+    let isAuthorized = password == "";
     if (!isAuthorized) {
         return (
             <Box style={{ maxWidth: 240, margin: "auto" }}>
