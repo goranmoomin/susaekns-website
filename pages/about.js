@@ -1,9 +1,52 @@
+import { useState, useRef, useEffect } from "react";
+
 import Link from "next/link";
 import Image from "next/image";
 
 import { Section, Heading, Container, Menu, Columns, Box, Element, Block } from "react-bulma-components";
+import { useKeenSlider } from "keen-slider/react";
 
 import Layout from "../components/layout";
+
+function Slide({ children }) {
+    return <div className="keen-slider__slide is-relative" style={{ height: 0, paddingBottom: "40%" }}>{children}</div>;
+}
+
+function AutoSlider({ children }) {
+    let [pause, setPause] = useState(false);
+    let timer = useRef();
+    let [sliderRef, slider] = useKeenSlider({
+        loop: true,
+        duration: 1000,
+        slidesPerView: 3,
+        spacing: 16,
+        dragStart: () => { setPause(true); },
+        dragEnd: () => { setPause(false); },
+    });
+    useEffect(() => {
+        sliderRef.current.addEventListener("mouseover", () => {
+            setPause(true);
+        });
+        sliderRef.current.addEventListener("mouseout", () => {
+            setPause(false);
+        });
+    }, [sliderRef]);
+    useEffect(() => {
+        timer.current = setInterval(() => {
+            if (!pause && slider) {
+                slider.next();
+            }
+        }, 2000);
+        return () => {
+            clearInterval(timer.current);
+        };
+    }, [pause, slider]);
+    return (
+        <div ref={sliderRef} className="keen-slider">
+            {children}
+        </div>
+    );
+}
 
 export default function About() {
     return (
@@ -83,8 +126,7 @@ export default function About() {
                     </Section>
                     <Section id="intro">
                         <Block><Heading size={3}>의료진 소개</Heading></Block>
-                        <Block clearfix>
-                            <Image src="/images/profile.jpg" width={400} height={314} alt="" className="is-pulled-right" />
+                        <Block>
                             <Heading size={4} subtitle renderAs="h2">원장 조재영</Heading>
                             <ul style={{ listStyle: "circle inside" }}>
                                 <li>중앙대학교 의과대학 졸업</li>
@@ -114,7 +156,44 @@ export default function About() {
                     <Section id="equipment">
                         <Block><Heading size={3}>시설 및 장비</Heading></Block>
                         <Block>
-
+                            <AutoSlider>
+                                <Slide>
+                                    <Image src="/images/equipment01.jpg" fill alt="" className="object-contain" />
+                                </Slide>
+                                <Slide>
+                                    <Image src="/images/equipment02.jpg" fill alt="" className="object-contain" />
+                                </Slide>
+                                <Slide>
+                                    <Image src="/images/equipment03.jpg" fill alt="" className="object-contain" />
+                                </Slide>
+                                <Slide>
+                                    <Image src="/images/equipment04.jpg" fill alt="" className="object-contain" />
+                                </Slide>
+                                <Slide>
+                                    <Image src="/images/equipment05.jpg" fill alt="" className="object-contain" />
+                                </Slide>
+                                <Slide>
+                                    <Image src="/images/equipment06.jpg" fill alt="" className="object-contain" />
+                                </Slide>
+                                <Slide>
+                                    <Image src="/images/equipment07.jpg" fill alt="" className="object-contain" />
+                                </Slide>
+                                <Slide>
+                                    <Image src="/images/equipment08.jpg" fill alt="" className="object-contain" />
+                                </Slide>
+                                <Slide>
+                                    <Image src="/images/equipment09.jpg" fill alt="" className="object-contain" />
+                                </Slide>
+                                <Slide>
+                                    <Image src="/images/equipment10.jpg" fill alt="" className="object-contain" />
+                                </Slide>
+                                <Slide>
+                                    <Image src="/images/equipment11.jpg" fill alt="" className="object-contain" />
+                                </Slide>
+                                <Slide>
+                                    <Image src="/images/equipment12.jpg" fill alt="" className="object-contain" />
+                                </Slide>
+                            </AutoSlider>
                         </Block>
                     </Section>
                 </Columns.Column>
