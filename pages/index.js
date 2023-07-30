@@ -75,7 +75,7 @@ export default function Home() {
                 <Tile kind="ancestor">
                     <Tile kind="parent" vertical>
                         <Tile kind="child" display="relative" style={{ height: 0, paddingBottom: "50%" }} className="overflow-hidden">
-                            <Link href="#">
+                            <Link href="/nonsurgical#manual">
                                 <Image src="/images/therapy.jpeg" fill className="object-cover transition-transform hover:scale-125" alt="" />
                             </Link>
                             <Element display="flex" justifyContent="center" alignItems="center" overlay className="bg-black/30 pointer-events-none">
@@ -85,7 +85,7 @@ export default function Home() {
                             </Element>
                         </Tile>
                         <Tile kind="child" display="relative" style={{ height: 0, paddingBottom: "50%" }} className="overflow-hidden">
-                            <Link href="#">
+                            <Link href="/nonsurgical#shockwave">
                                 <Image src="/images/shockwave.jpeg" fill className="object-cover transition-transform hover:scale-125" alt="" />
                             </Link>
                             <Element display="flex" justifyContent="center" alignItems="center" overlay className="bg-black/30 pointer-events-none">
@@ -97,7 +97,7 @@ export default function Home() {
                     </Tile>
                     <Tile kind="parent" vertical>
                         <Tile kind="child" display="relative" style={{ height: 0, paddingBottom: "50%" }} className="overflow-hidden">
-                            <Link href="#">
+                            <Link href="/joint">
                                 <Image src="/images/joint.jpeg" fill className="object-cover transition-transform hover:scale-125" alt="" />
                             </Link>
                             <Element display="flex" justifyContent="center" alignItems="center" overlay className="bg-black/30 pointer-events-none">
@@ -107,7 +107,7 @@ export default function Home() {
                             </Element>
                         </Tile>
                         <Tile kind="child" display="relative" style={{ height: 0, paddingBottom: "50%" }} className="overflow-hidden">
-                            <Link href="#">
+                            <Link href="/spine">
                                 <Image src="/images/spine.jpeg" fill className="object-cover transition-transform hover:scale-125" alt="" />
                             </Link>
                             <Element display="flex" justifyContent="center" alignItems="center" overlay className="bg-black/30 pointer-events-none">

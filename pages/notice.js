@@ -184,7 +184,7 @@ export default function Notice() {
                                         </tr>
                                         <tr>
                                             <td rowspan={3}>주사제</td>
-                                            <td>리포라제 1A</td>
+                                            <td>하이알라제 1A</td>
                                             <td>200,000 / vial</td>
                                             <td>-</td>
                                         </tr>

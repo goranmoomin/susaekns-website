@@ -64,7 +64,7 @@ export default function MyNavbar() {
                     <Navbar.Item hoverable>
                         <Navbar.Link href="/notice" renderAs={Link}>공지사항</Navbar.Link>
                         <Navbar.Dropdown>
-                            <Navbar.Item href="#" renderAs={Link}>비급여진료</Navbar.Item>
+                            <Navbar.Item href="/notice#" renderAs={Link}>비급여진료</Navbar.Item>
                         </Navbar.Dropdown>
                     </Navbar.Item>
                     <Navbar.Item href="https://blog.naver.com/susaekns" renderAs={Link}>⎋ 병원 블로그</Navbar.Item>
