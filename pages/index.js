@@ -8,7 +8,7 @@ import { useKeenSlider } from "keen-slider/react";
 import Layout from "../components/layout";
 
 function Slide({ children }) {
-    return <div className="keen-slider__slide is-relative" style={{ height: 0, paddingBottom: "40%" }}>{children}</div>;
+    return <div className="keen-slider__slide aspect-w-16 aspect-h-12 md:aspect-h-9"><div>{children}</div></div>;
 }
 
 function AutoSlider({ children }) {
@@ -50,20 +50,20 @@ export default function Home() {
         <Layout header={
             <AutoSlider>
                 <Slide>
-                    <Image src="/images/banner0.jpg" fill style={{ objectFit: "cover" }} alt="" />
+                    <Image src="/images/banner0.jpg" fill className="object-cover" alt="" />
                     <Element display="flex" justifyContent="center" alignItems="center"
-                             style={{ position: "absolute", inset: "20%", backgroundColor: "rgba(0, 0, 0, 0.3)" }}>
-                        <Element textColor="light" textSize={4} textWeight="semibold">
+                             className="absolute inset-0 md:inset-1/4 bg-black/25">
+                        <Element textColor="light" textSize={6} widescreen={{ textSize: 4 }} textWeight="semibold" className="mx-2">
                             수색신경외과 의원은 풍부한 경험을 바탕으로<br />가족같은 마음으로 진료하겠습니다.<br/>
                             척추 / 관절 / 뇌혈관 / 통증 / 도수치료
                         </Element>
                     </Element>
                 </Slide>
                 <Slide>
-                    <Image src="/images/banner1.jpg" fill style={{ objectFit: "cover" }} alt="" />
+                    <Image src="/images/banner1.jpg" fill className="object-cover" alt="" />
                     <Element display="flex" justifyContent="center" alignItems="center"
-                             style={{ position: "absolute", inset: "20%", backgroundColor: "rgba(0, 0, 0, 0.3)" }}>
-                        <Element textAlign="center" textColor="light" textSize={2} textWeight="semibold">
+                             className="absolute inset-0 md:inset-1/4 bg-black/25">
+                        <Element textAlign="center" textColor="light" textSize={4} widescreen={{ textSize: 2 }} textWeight="semibold">
                             숙련된 전문 도수치료사의<br />1:1 맞춤 치료
                         </Element>
                     </Element>

@@ -1,3 +1,5 @@
+import aspectRatio from "@tailwindcss/aspect-ratio";
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
@@ -8,5 +10,7 @@ module.exports = {
     theme: {
         extend: {},
     },
-    plugins: [],
+    plugins: [
+        aspectRatio,
+    ],
 }
