@@ -103,12 +103,12 @@ export default function Notice() {
                                         </tr>
                                         <tr>
                                             <td>손목 지지대 (Support)</td>
-                                            <td>23,000</td>
+                                            <td>25,000</td>
                                             <td>-</td>
                                         </tr>
                                         <tr>
                                             <td>발목 지지대 (Support)</td>
-                                            <td>23,000</td>
+                                            <td>25,000</td>
                                             <td>-</td>
                                         </tr>
                                         <tr>
@@ -133,7 +133,7 @@ export default function Notice() {
                                         </tr>
                                         <tr>
                                             <td>무릎 지지대 (support)</td>
-                                            <td>23,000</td>
+                                            <td>25,000</td>
                                             <td>-</td>
                                         </tr>
                                         <tr>
@@ -165,7 +165,7 @@ export default function Notice() {
                                             <td rowspan={4}>행위</td>
                                             <td>초음파</td>
                                             <td>30,000 ~ 100,000</td>
-                                            <td>급여인정기준외</td>
+                                            <td>부위에 따라서</td>
                                         </tr>
                                         <tr>
                                             <td>인대강화 주사요법</td>
@@ -180,11 +180,11 @@ export default function Notice() {
                                         <tr>
                                             <td>체외충격파</td>
                                             <td>50,000</td>
-                                            <td>-</td>
+                                            <td>시간, 부위, 방식에 따라서</td>
                                         </tr>
                                         <tr>
                                             <td rowspan={3}>주사제</td>
-                                            <td>하이알라제 1A</td>
+                                            <td>리포라제 1A</td>
                                             <td>200,000 / vial</td>
                                             <td>-</td>
                                         </tr>
