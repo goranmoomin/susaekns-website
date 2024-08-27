@@ -14,9 +14,12 @@
         "prop-types": "^15.8.1",
         "react": "^18.2.0",
         "react-bulma-components": "^4.1.0",
-        "react-dom": "^18.2.0"
+        "react-dom": "^18.2.0",
+        "react-modal": "^3.16.1",
+        "reactjs-popup": "^2.0.6"
     },
     "devDependencies": {
+        "@tailwindcss/aspect-ratio": "^0.4.2",
         "autoprefixer": "^10.4.14",
         "next": "^13.4.9",
         "postcss": "^8.4.25",
