@@ -1,14 +1,11 @@
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Modal from 'react-modal';
 
-import { Box, Section, Tile, Heading, Notification, Content, Columns, Element, Button } from "react-bulma-components";
+import { Box, Section, Tile, Heading, Notification, Content, Columns, Element, Button, Modal } from "react-bulma-components";
 import { useKeenSlider } from "keen-slider/react";
 
 import Layout from "../components/layout";
-
-Modal.setAppElement('#__next');
 
 function Slide({ children }) {
     return <div className="keen-slider__slide aspect-w-16 aspect-h-12 md:aspect-h-9"><div>{children}</div></div>;
@@ -18,26 +15,10 @@ function LocationChangePopup() {
     const [isOpen, setIsOpen] = useState(true);
 
     return (
-        <Modal
-            isOpen={isOpen}
-            onRequestClose={() => setIsOpen(false)}
-            contentLabel="Location Change Notice"
-            style={{
-                overlay: {
-                    backgroundColor: 'rgba(0, 0, 0, 0.75)',
-                    zIndex: 1000,
-                },
-                content: {
-                    inset: 0,
-                    padding: 0,
-                    border: 'none',
-                    background: 'none',
-                }
-            }}
-        >
-            <div className="relative w-full h-full">
-                <Image src="/images/popup.jpeg" layout="fill" objectFit="contain" alt="Location change notice" />
-            </div>
+        <Modal show={isOpen} onClose={() => setIsOpen(false)} closeOnBlur closeOnEsc>
+            <Modal.Content className="h-full">
+                <Image src="/images/popup.jpeg" layout="fill" objectFit="contain" alt="" />
+            </Modal.Content>
         </Modal>
     );
 }
